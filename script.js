@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    if (window.innerWidth <= 600) {
+    if (window.innerWidth <= 1158) {
       const container = document.querySelector('.samew.productHeading');
       
       let isDown = false;
