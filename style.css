@@ -69,9 +69,9 @@ body {
 .mobileDownload {
   display: none;
 }
-.log:hover{
+.log:hover {
   background-color: var(--arrow-button-color);
-  padding:0.5rem;
+  padding: 0.5rem;
   border-radius: 1rem;
 }
 @media (max-width: 1286px) {
@@ -127,32 +127,64 @@ body {
     margin-right: 2rem;
     margin-left: -5rem;
   }
+  .six,
+  .seven,
+  .eight,
+  .nine {
+    display: none;
+  }
 }
 /* nav section end */
 
-.samew{
-  width:98%;
+.samew {
+  width: 98%;
   background-color: white;
-  margin:auto;
+  margin: auto;
   margin-top: 1rem;
 }
-.productHeading{
+.productHeading {
   display: flex;
-  gap:5rem;
+  gap: 2rem;
   justify-content: center;
-  padding:3rem;
+  padding: 4rem;
 }
-.productHeading img{
-  width:6rem;
+.productHeading img {
+  width: 6rem;
 }
-.productHeading p{
+.productHeading p {
   text-align: center;
   font-size: 1.5rem;
 }
-.products{
-  width:10rem;
+.products {
+  width: 10rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-
 }
+
+@media (max-width: 600px) {
+  .samew.productHeading {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 10px;
+    -ms-overflow-style: none; /* For Internet Explorer and Edge */
+    scrollbar-width: none; /* For Firefox */
+  }
+  .samew.productHeading::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Opera */
+  }
+  .products {
+    flex: 0 0 auto; /* Prevents shrinking and ensures each product stays its size */
+    margin-right: 15px; /* Adds spacing between products */
+    text-align: center;
+    width: 100px; /* Adjust as needed */
+  }
+  
+  .products img {
+    width: 100%; /* Ensures images fit the container */
+    height: auto;
+  }
+  
+}
+
